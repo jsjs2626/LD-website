@@ -21,10 +21,22 @@ class LaunchDarklyManager {
                 anonymous: true
             };
 
+            this.context = {
+                kind: 'user',
+                key: 'context-key-123abc'
+            }
+ 
+
             // Initialize LaunchDarkly client
-            this.client = window.LDClient.initialize('68f00301acf74e09a6ccb56d', this.user);
+            // Replace this with your actual LaunchDarkly client-side ID
+            this.client = window.LDClient.initialize('68f00301acf74e09a6ccb56c', this.context);
             
             await this.client.waitForInitialization();
+
+            await this.client.track('68f00301acf74e09a6ccb56c');
+            console.log('Tracked')
+            
+            console.log('LaunchDarkly initialized successfully!');
             
             // Get feature flag values
             this.updateFeatureFlags();
