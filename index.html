@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreditCard Planner - Find Your Perfect Credit Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://app.launchdarkly.com/snippet/ldclient.min.js"></script>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" id="hero-title">Find Your Perfect Credit Card</h1>
+                <p class="hero-subtitle" id="hero-subtitle">For those who want to maximize credit card points!</p>
+                <button class="cta-button" id="main-cta">Get Started</button>
+            </div>
+            <div class="hero-visual">
+                <div class="credit-card-preview">
+                    <div class="card card-1"></div>
+                    <div class="card card-2"></div>
+                    <div class="card card-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="calculator-preview" id="calculator-section">
+        <div class="container">
+            <h2>Quick Card Recommendation</h2>
+            <p>Answer a few questions to see which cards might work best for you</p>
+            
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="monthly-spending">Monthly Spending Amount</label>
+                    <input type="number" id="monthly-spending" placeholder="Enter amount" min="0" step="100">
+                </div>
+                
+                <div class="form-group">
+                    <label for="credit-score">Credit Score Range</label>
+                    <select id="credit-score">
+                        <option value="">Select range</option>
+                        <option value="300-579">300-579 (Poor)</option>
+                        <option value="580-669">580-669 (Fair)</option>
+                        <option value="670-739">670-739 (Good)</option>
+                        <option value="740-799">740-799 (Very Good)</option>
+                        <option value="800-850">800-850 (Excellent)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="current-cards">Number of Credit Cards</label>
+                    <select id="current-cards">
+                        <option value="">Select number</option>
+                        <option value="0">0 cards</option>
+                        <option value="1">1 card</option>
+                        <option value="2">2 cards</option>
+                        <option value="3">3 cards</option>
+                        <option value="4+">4+ cards</option>
+                    </select>
+                </div>
+                
+                <div class="recommendation-preview" id="recommendation-preview">
+                    <h3>Recommended for you:</h3>
+                    <div class="recommendation-cards" id="recommendation-cards">
+                        <p class="placeholder">Fill out the form above to see recommendations</p>
+                    </div>
+                </div>
+                
+                <button class="calculator-cta" id="full-calculator-cta">Get Full Analysis</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features-section">
+        <div class="container">
+            <h2>Why Choose CreditCard Planner?</h2>
+            <div class="features-grid">
+                <div class="feature-card" id="feature-personalized">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Personalized Recommendations</h3>
+                    <p>Get card suggestions tailored to your spending patterns and financial goals</p>
+                </div>
+                
+                <div class="feature-card" id="feature-compare">
+                    <div class="feature-icon">⚖️</div>
+                    <h3>Compare Rewards & Benefits</h3>
+                    <p>Side-by-side comparison of rewards rates, fees, and perks across different cards</p>
+                </div>
+                
+                <div class="feature-card" id="feature-unbiased">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Unbiased Analysis</h3>
+                    <p>Objective recommendations based on data, not affiliate partnerships</p>
+                </div>
+                
+                <div class="feature-card" id="feature-savings">
+                    <div class="feature-icon">💰</div>
+                    <h3>Maximize Your Savings</h3>
+                    <p>Find cards that help you save on fees and earn more rewards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CreditCard Planner</h4>
+                    <p>Find the perfect credit card for your lifestyle</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#calculator-section">Card Calculator</a></li>
+                        <li><a href="#features-section">How It Works</a></li>
+                        <li><a href="#">Credit Score Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CreditCard Planner. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="ld-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
