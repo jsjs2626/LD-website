@@ -1,4 +1,4 @@
-const LDClient = require('launchdarkly-js-client-sdk')
+//import LDClient from 'launchdarkly-js-client-sdk';
 
 const context = {
     kind: 'user',
